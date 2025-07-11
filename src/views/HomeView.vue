@@ -51,7 +51,7 @@
 						<div class="card-body">
 							<h5 class="card-title">夏季休業のお知らせ</h5>
 							<p class="card-text">夏季休業期間についてご案内いたします。ご不便をおかけしますが、何卒ご理解のほど...</p>
-							<p class="card-button text-center mt-3"><BaseLinkButton to="/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
+							<p class="card-button text-center mt-3"><BaseLinkButton to="/news/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
 						</div>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 						<div class="card-body">
 							<h5 class="card-title">新サービスの提供開始</h5>
 							<p class="card-text">業務効率化パッケージの提供を開始しました。詳しい機能や導入効果について...</p>
-							<p class="card-button text-center mt-3"><BaseLinkButton to="/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
+							<p class="card-button text-center mt-3"><BaseLinkButton to="/news/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
 						</div>
 					</div>
 				</div>
@@ -71,7 +71,7 @@
 						<div class="card-body">
 							<h5 class="card-title">ホームページリニューアル</h5>
 							<p class="card-text">当社ホームページを全面リニューアルいたしました。より見やすく、情報を探しやすく...</p>
-							<p class="card-button text-center mt-3"><BaseLinkButton to="/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
+							<p class="card-button text-center mt-3"><BaseLinkButton to="/news/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
 						</div>
 					</div>
 				</div>
