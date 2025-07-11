@@ -3,7 +3,7 @@
 			<div class="container">
 				<h2 class="display-5 fw-bold mb-3">信頼と実績のビジネスパートナー</h2>
 				<p class="lead mb-5">私たちは、お客様の課題を共に解決する企業です。</p>
-				<RouterLink to="/contact" class="btn btn-primary">お問い合わせ</RouterLink>
+				<BaseLinkButton to="/contact" class="btn btn-primary">お問い合わせ</BaseLinkButton>
 			</div>
 		</section>
 
@@ -37,7 +37,7 @@
 						</div>
 					</div>
 				</div>
-				<p class="mt-5"><RouterLink to="/service" class="btn btn-primary">サービス一覧を見る</RouterLink></p>
+				<p class="mt-5"><BaseLinkButton to="/service" class="btn btn-secondary">サービス一覧を見る</BaseLinkButton></p>
 			</div>
 		</section>
 
@@ -51,7 +51,7 @@
 						<div class="card-body">
 							<h5 class="card-title">夏季休業のお知らせ</h5>
 							<p class="card-text">夏季休業期間についてご案内いたします。ご不便をおかけしますが、何卒ご理解のほど...</p>
-							<p class="card-button text-center mt-3"><RouterLink to="/news-detail" class="btn btn-primary">詳細を見る</RouterLink></p>
+							<p class="card-button text-center mt-3"><BaseLinkButton to="/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
 						</div>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 						<div class="card-body">
 							<h5 class="card-title">新サービスの提供開始</h5>
 							<p class="card-text">業務効率化パッケージの提供を開始しました。詳しい機能や導入効果について...</p>
-							<p class="card-button text-center mt-3"><RouterLink to="/news-detail" class="btn btn-primary">詳細を見る</RouterLink></p>
+							<p class="card-button text-center mt-3"><BaseLinkButton to="/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
 						</div>
 					</div>
 				</div>
@@ -71,12 +71,13 @@
 						<div class="card-body">
 							<h5 class="card-title">ホームページリニューアル</h5>
 							<p class="card-text">当社ホームページを全面リニューアルいたしました。より見やすく、情報を探しやすく...</p>
-							<p class="card-button text-center mt-3"><RouterLink to="/news-detail" class="btn btn-primary">詳細を見る</RouterLink></p>
+							<p class="card-button text-center mt-3"><BaseLinkButton to="/news-detail" class="btn btn-info">詳細を見る</BaseLinkButton></p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<p class="mt-5 text-center"><RouterLink to="/news" class="btn btn-primary">記事一覧はこちら</RouterLink></p>
+			
+			<p class="mt-5 text-center"><BaseLinkButton to="/news" class="btn btn-secondary">記事一覧はこちら</BaseLinkButton></p>
 		</div>
 	</section>
 
@@ -86,4 +87,5 @@
 <script setup>
 import sampleImage from '@/assets/sample.jpg'
 import CtaSection from '@/components/sections/CtaSection.vue'
+import BaseLinkButton from '@/components/base/BaseLinkButton.vue'
 </script>
