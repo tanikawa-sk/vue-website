@@ -8,16 +8,32 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink to="/" class="nav-link">ホーム</RouterLink>
+            <RouterLink
+              to="/"
+              class="nav-link"
+              :class="{ active: isActiveRoute('/') }"
+            >ホーム</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/service" class="nav-link">サービス</RouterLink>
+            <RouterLink
+              to="/service"
+              class="nav-link"
+              :class="{ active: isActiveRoute('/service') }"
+            >サービス</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/contact" class="nav-link">お問い合わせ</RouterLink>
+            <RouterLink
+              to="/contact"
+              class="nav-link"
+              :class="{ active: isActiveRoute('/contact') }"
+            >お問い合わせ</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/news" class="nav-link">お知らせ</RouterLink>
+            <RouterLink
+              to="/news"
+              class="nav-link"
+              :class="{ active: isActiveRoute('/news') }"
+            >お知らせ</RouterLink>
           </li>
         </ul>
       </div>
@@ -26,5 +42,11 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const isActiveRoute = (path) => {
+  return route.path === path || route.path.startsWith(path + '/')
+}
 </script>
