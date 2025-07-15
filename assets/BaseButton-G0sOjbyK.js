@@ -1,0 +1,1 @@
+import{c as n,o as s,m as r}from"./index-exxun87K.js";const a=["type"],u={__name:"BaseButton",props:{type:{type:String,default:"button"}},setup(o){return(t,e)=>(s(),n("button",{class:"base-button",type:o.type,onClick:e[0]||(e[0]=p=>t.$emit("click"))},[r(t.$slots,"default")],8,a))}};export{u as _};
