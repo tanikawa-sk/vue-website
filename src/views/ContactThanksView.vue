@@ -14,4 +14,9 @@
 import ContactLayout from '@/components/layout/ContactLayout.vue'
 import BaseLinkButton from '@/components/base/BaseLinkButton.vue'
 
+import { useContactFormStore } from '@/stores/contactForm'
+
+const store = useContactFormStore()
+store.$reset()
+
 </script>

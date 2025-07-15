@@ -7,10 +7,10 @@
           type="text"
           id="name"
           class="form-control"
-          v-model="form.name"
+          v-model="store.name"
           @blur="touched.name = true"
         />
-        <div v-if="touched.name && form.name.trim() === ''" class="text-danger small mt-1">
+        <div v-if="touched.name && store.name.trim() === ''" class="text-danger small mt-1">
           お名前を入力してください
         </div>
       </div>
@@ -20,7 +20,7 @@
           type="email"
           id="email"
           class="form-control"
-          v-model="form.email"
+          v-model="store.email"
           @blur="touched.email = true"
         />
         <div v-if="touched.email && !validEmail" class="text-danger small mt-1">
@@ -33,10 +33,10 @@
           id="message"
           class="form-control"
           rows="4"
-          v-model="form.message"
+          v-model="store.message"
           @blur="touched.message = true"
         ></textarea>
-        <div v-if="touched.message && form.message.trim().length < 5" class="text-danger small mt-1">
+        <div v-if="touched.message && store.message.trim().length < 5" class="text-danger small mt-1">
           5文字以上入力してください
         </div>
       </div>
@@ -56,13 +56,10 @@ import { useRouter } from 'vue-router'
 import ContactLayout from '@/components/layout/ContactLayout.vue'
 import BaseButton from '@/components/base/BaseButton.vue'
 
-const router = useRouter()
+import { useContactFormStore } from '@/stores/contactForm'
 
-const form = reactive({
-  name: '',
-  email: '',
-  message: ''
-})
+const router = useRouter()
+const store = useContactFormStore()
 
 const touched = reactive({
   name: false,
@@ -71,13 +68,13 @@ const touched = reactive({
 })
 
 const validEmail = computed(() =>
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(form.email)
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(store.email)
 )
 
 const isFormValid = computed(() =>
-  form.name.trim() !== '' &&
+  store.name.trim() !== '' &&
   validEmail.value &&
-  form.message.trim().length >= 5
+  store.message.trim().length >= 5
 )
 
 const submitForm = () => {
