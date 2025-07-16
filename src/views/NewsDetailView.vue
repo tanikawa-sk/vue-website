@@ -25,4 +25,14 @@
 import CtaSection from '@/components/sections/CtaSection.vue'
 import BaseLinkButton from '@/components/base/BaseLinkButton.vue'
 import sampleImage from '@/assets/sample.jpg'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'ニュース詳細ページ',
+  meta: [
+    { name: 'description', content: 'ニュースの詳細を紹介します。' },
+    { property: 'og:title', content: 'ニュース詳細ページ' },
+    { property: 'og:description', content: 'ニュースの詳細を紹介します。' }
+  ]
+})
 </script>

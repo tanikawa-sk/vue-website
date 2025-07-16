@@ -27,6 +27,7 @@
 import CtaSection from '@/components/sections/CtaSection.vue'
 import BaseLinkButton from '@/components/base/BaseLinkButton.vue'
 import sampleImage from '@/assets/sample.jpg'
+import { useHead } from '@vueuse/head'
 
 const services = [
   {
@@ -78,5 +79,13 @@ const services = [
     }
   }
 ]
+useHead({
+  title: 'サービスページ',
+  meta: [
+    { name: 'description', content: 'サービスの一覧を紹介します。' },
+    { property: 'og:title', content: 'サービスページ' },
+    { property: 'og:description', content: 'サービスの一覧を紹介します。' }
+  ]
+})
 </script>
 
