@@ -21,6 +21,7 @@
 import CtaSection from '@/components/sections/CtaSection.vue'
 import BaseLinkButton from '@/components/base/BaseLinkButton.vue'
 import sampleImage from '@/assets/sample.jpg'
+import { useHead } from '@vueuse/head'
 
 const newsList = [
   {
@@ -66,5 +67,12 @@ const newsList = [
     to: '/news/news-detail'
   }
 ]
-
+useHead({
+  title: 'ニュースページ',
+  meta: [
+    { name: 'description', content: 'ニュースの一覧を紹介します。' },
+    { property: 'og:title', content: 'ニュースページ' },
+    { property: 'og:description', content: 'ニュースの一覧を紹介します。' }
+  ]
+})
 </script>
