@@ -11,7 +11,9 @@ export const routes = [
   { path: '/contact/contact-thanks', component: () => import('@/views/ContactThanksView.vue') }
 ]
 
-export const router = createRouter({
-  history: createWebHistory(),
-  routes,
-})
+export function createMyRouter() {
+  return createRouter({
+    history: createWebHistory(),
+    routes,
+  })
+}

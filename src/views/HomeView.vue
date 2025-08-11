@@ -88,4 +88,13 @@
 import sampleImage from '@/assets/sample.jpg'
 import CtaSection from '@/components/sections/CtaSection.vue'
 import BaseLinkButton from '@/components/base/BaseLinkButton.vue'
+import { useHead } from '@vueuse/head'
+useHead({
+  title: 'Sample Corp.',
+  meta: [
+    { name: 'description', content: 'Sample Corpは信頼と実績を提供するビジネスパートナーです。' },
+    { property: 'og:title', content: 'Sample Corp.' },
+    { property: 'og:description', content: 'Sample Corpは信頼と実績を提供するビジネスパートナーです。' }
+  ]
+})
 </script>
